@@ -1,0 +1,43 @@
+$c1: #2a73dd;
+$c1-400: #656774;
+$c1-500: #1d365e;
+$c1-700: #0a1424;
+$c1-900: #020813;
+$c2: #e2ebfc;
+$c3: #ffffff;
+
+$text-xs: 10px;
+$text-sm: 14px;
+$text-base: 16px;
+$text-md: 20px;
+$text-lg: 24px;
+$text-xl: 28px;
+$text-2xl: 30px;
+$text-3xl: 40px;
+$text-4xl: 70px;
+
+$text-light: 300;
+$text-normal: 400;
+$text-semiBold: 600;
+$text-bold: 700;
+
+// text, button, input...
+@mixin text($fs: $text-base, $fw: $text-normal, $c: $c1-500) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+
+@mixin button($bg, $pd, $bd, $br, $bs, $c, $fs, $fw, $bg-hover, $c-hover) {
+  background: $bg;
+  padding: $pd;
+  border: $bd;
+  border-radius: $br;
+  box-shadow: $bs;
+  cursor: pointer;
+  @include text($fs, $fw, $c);
+  &:hover {
+    background: $bg-hover;
+    color: $c-hover;
+  }
+}

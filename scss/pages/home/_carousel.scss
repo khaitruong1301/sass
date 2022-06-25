@@ -1,0 +1,62 @@
+.carousel {
+  height: 800px;
+  background-image: url(../../../img/product-header-bg.jpg);
+  background-size: cover;
+  background-position: right bottom;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .detail {
+      h1 {
+        @include text($text-4xl, $text-bold, $c1);
+        margin-bottom: 10px;
+      }
+      span {
+        @include text($text-md, $text-semiBold, $c1-500);
+        margin-bottom: 20px;
+        display: block;
+      }
+      p {
+        @include text($text-base, $text-normal, $c1-400);
+        margin-bottom: 20px;
+      }
+      .btn-info {
+        @include button(
+          transparent,
+          10px 30px,
+          2px solid $c1,
+          5px,
+          0 3px 6px #c9d8f4,
+          $c1,
+          $text-sm,
+          $text-semiBold,
+          $c1,
+          $c3
+        );
+      }
+      .btn-shop {
+        @include button(
+          linear-gradient(120deg, #60a4f4, #2a73dd),
+          12px 32px,
+          none,
+          5px,
+          0 3px 6px #c9d8f4,
+          $c3,
+          $text-sm,
+          $text-semiBold,
+          $c3,
+          $c1
+        );
+      }
+    }
+
+    .thumbnail {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
